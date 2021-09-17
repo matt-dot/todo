@@ -1,10 +1,10 @@
 #! /usr/bin/env node
 
 import { program } from 'commander';
-import {list} from './list';
-import {add} from './add';
-import {markDone} from './markDone';
-import {clear} from './clear';
+import { list } from './list';
+import { add } from './add';
+import { markDone } from './markDone';
+import { clear } from './clear';
 
 program
     .command('list')

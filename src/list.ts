@@ -1,7 +1,9 @@
-import * as chalk from 'chalk';
-import * as Conf from 'conf';
+import * as chalk from 'chalk'; // Method 2 import (import everything under namespace)
+import Conf from 'conf'; // Method 3 import (default)
+import {Todo} from './todo-type';
 
-const conf = new Conf();
+const conf = new Conf<{'todo-list': Array<Todo>}>();
+
 
 
 const todoList = conf.get('todo-list')

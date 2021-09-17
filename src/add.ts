@@ -1,13 +1,11 @@
 import * as chalk from 'chalk';
-import * as Conf from 'conf';
+import Conf from 'conf';
+import {Todo} from './todo-type';
 
-const conf = new Conf();
+const conf = new Conf<{'todo-list': Array<Todo>}>();
 
 
-
-const todoList = conf.get("todo-list");
-
-export function add(task) {
+export function add(task: any) {
   let todoList = conf.get("todo-list");
 
   if (!todoList) {
@@ -22,7 +20,7 @@ export function add(task) {
 
   conf.set('todo-list', todoList)
 
-  console.log(chalk.green.bold("Task added to TODO"))
+  console.log(chalk.green("Task added to TODO"))
 
 }
 

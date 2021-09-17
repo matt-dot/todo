@@ -1,9 +1,10 @@
 import * as chalk from 'chalk';
-import * as Conf from 'conf';
+import Conf from 'conf'; // Method 3 import (default)
+import {Todo} from './todo-type';
 
-const conf = new Conf();
+const conf = new Conf<{'todo-list': Array<Todo>}>();
 
-export function markDone({tasks}) {
+export function markDone({tasks}: any) {
     let todoList = conf.get("todo-list")
 
     if (todoList) {

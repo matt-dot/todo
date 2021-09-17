@@ -2,7 +2,7 @@
   "name": "todo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,7 +14,7 @@
     "conf": "^10.0.2"
   },
   "bin": {
-    "todo": "index.js"
+    "todo": "lib/index.js"
   },
   "devDependencies": {
     "typescript": "^4.4.3"
