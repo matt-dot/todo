@@ -1,8 +1,9 @@
-const conf = new (require("conf"))();
-const chalk = require("chalk");
+import * as chalk from 'chalk';
+import * as Conf from 'conf';
 
+const conf = new Conf();
 
-function markDone({tasks}) {
+export function markDone({tasks}) {
     let todoList = conf.get("todo-list")
 
     if (todoList) {
@@ -16,16 +17,15 @@ function markDone({tasks}) {
             }
             return task
         });
-    
+
     conf.set('todo-list', todoList)
 
 
     }
-    
+
     console.log(
         chalk.green.bold('Tasks have been marked successfully')
     )
 }
 
-module.exports = markDone
 

@@ -1,10 +1,10 @@
 #! /usr/bin/env node
 
-const { program } = require('commander')
-const list = require('./list')
-const add = require('./add')
-const markDone = require('./markDone')
-const clear = require('./clear')
+import { program } from 'commander';
+import {list} from './list';
+import {add} from './add';
+import {markDone} from './markDone';
+import {clear} from './clear';
 
 program
     .command('list')

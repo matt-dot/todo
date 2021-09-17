@@ -1,9 +1,13 @@
-const conf = new (require("conf"))();
-const chalk = require("chalk");
+import * as chalk from 'chalk';
+import * as Conf from 'conf';
+
+const conf = new Conf();
+
+
 
 const todoList = conf.get("todo-list");
 
-function add(task) {
+export function add(task) {
   let todoList = conf.get("todo-list");
 
   if (!todoList) {
@@ -22,4 +26,4 @@ function add(task) {
 
 }
 
-module.exports = add
+
