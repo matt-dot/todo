@@ -15,5 +15,8 @@
   },
   "bin": {
     "todo": "index.js"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3"
   }
 }
