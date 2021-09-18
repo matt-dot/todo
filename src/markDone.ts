@@ -1,8 +1,36 @@
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 import Conf from 'conf'; // Method 3 import (default)
 import {Todo} from './todo-type';
 
 const conf = new Conf<{'todo-list': Array<Todo>}>();
+
+enum ChalkColor {
+    Green = 'green',
+    Yellow = 'yellow',
+    Red = 'red'
+}
+
+function getGreen(): ChalkColor {
+    let color = ChalkColor.Green;
+
+    return color;
+}
+
+function getRed(): ChalkColor {
+    let color = ChalkColor.Red;
+
+    return color;
+}
+
+function getYellow(): ChalkColor {
+    let color = ChalkColor.Green;
+
+    return color;
+}
+
+const chalkGreen = getGreen();
+const chalkRed = getRed();
+const chalkYellow = getYellow();
 
 export function markDone({tasks}: any) {
     let todoList = conf.get("todo-list")
@@ -25,7 +53,7 @@ export function markDone({tasks}: any) {
     }
 
     console.log(
-        chalk.green.bold('Tasks have been marked successfully')
+        chalk[chalkGreen]('Tasks have been marked successfully')
     )
 }
 
