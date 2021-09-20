@@ -16,6 +16,9 @@
     "commander": "^8.2.0",
     "conf": "^10.0.3"
   },
+  "bin": {
+    "todo": "index.js"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",

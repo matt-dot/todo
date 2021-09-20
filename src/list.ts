@@ -6,7 +6,8 @@ const conf = new Conf<{ 'todo-list': Array<Todo> }>();
 
 
 
-const todoList = conf.get('todo-list')
+export const todoList = conf.get('todo-list')
+
 
 
 enum ChalkColor {
