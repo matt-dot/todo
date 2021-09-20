@@ -1,13 +1,21 @@
 {
-  "name": "testrepo",
+  "name": "todo",
   "version": "1.0.0",
   "description": "",
-  "main": "sum.test.js",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "jest"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.2.0",
+    "conf": "^10.0.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
