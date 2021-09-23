@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import Conf from 'conf'; // Method 3 import (default)
-import {Todo} from './todo-type';
+import { Todo } from './todo-type';
 
 const conf = new Conf<{'todo-list': Array<Todo>}>();
 
@@ -36,7 +36,7 @@ const chalkYellow = getYellow();
 
 
 
-export function clear({tasks}: any) {
+export function clear({ tasks }: any) {
     let todoList: Todo[] = conf.get("todo-list")
 
 
@@ -44,7 +44,7 @@ export function clear({tasks}: any) {
         todoList = todoList.map((task, index) => {
             if (tasks) {
                 if (tasks.indexOf(index.toString()) !== -1) {
-                    delete(tasks.index);
+                    todoList.splice(index, tasks)
                 }
                 conf.set('todo-list', todoList)
                 console.log(conf.get("todo-list"))
