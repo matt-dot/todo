@@ -51,8 +51,6 @@ test('there is no I in team', () => {
   ];
 
   test('the shopping list has milk on it', () => {
-    expect(todoList.forEach((task, index) => {
-      task.text
-    })).toContain(undefined);
+    expect(todoList.forEach((task, index) => { task.done && task.text })).toBeDefined();
     //expect(new Set(shoppingList)).toContain('milk');
   });
