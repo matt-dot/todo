@@ -44,8 +44,7 @@ export function clear({tasks}: any) {
         todoList = todoList.map((task, index) => {
             if (tasks) {
                 if (tasks.indexOf(index.toString()) !== -1) {
-                    delete tasks.index;
-
+                    delete(tasks.index);
                 }
                 conf.set('todo-list', todoList)
                 console.log(conf.get("todo-list"))
@@ -64,5 +63,10 @@ export function clear({tasks}: any) {
     console.log(
         chalk[chalkGreen]('Tasks have been cleared successfully')
     )
+
+
+
+
+
 }
 
