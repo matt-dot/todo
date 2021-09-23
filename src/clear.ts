@@ -37,34 +37,15 @@ const chalkYellow = getYellow();
 
 
 export function clear({ tasks }: any) {
-    let todoList: Todo[] = conf.get("todo-list")
+    let todoList: Todo[] = conf.get("todo-list");
 
-
-    if (todoList) {
-        todoList = todoList.map((task, index) => {
-            if (tasks) {
-                if (tasks.indexOf(index.toString()) !== -1) {
-                    todoList.splice(index, tasks)
-                }
-                conf.set('todo-list', todoList)
-                console.log(conf.get("todo-list"))
-
-            }
-            return tasks;
-
-        });
-
-    todoList = tasks;
-    conf.set('todo-list', todoList)
-
-
-    }
+    todoList = todoList.filter(obj => obj !== tasks);
+    todoList = todoList.filter(n => n)
+    conf.set('todo-list', todoList);
 
     console.log(
         chalk[chalkGreen]('Tasks have been cleared successfully')
     )
-
-
 
 
 

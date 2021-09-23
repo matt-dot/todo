@@ -42,6 +42,7 @@ const chalkYellow = getYellow();
 
 export function list() {
     if (todoList && todoList.length && todoList !== null) {
+        console.log(todoList)
         // Tasks present
         console.log(chalk[chalkYellow]('Task in green are done. Tasks in red are not done'));
         todoList.forEach((task, index) => {
